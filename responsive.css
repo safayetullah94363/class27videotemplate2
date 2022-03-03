@@ -88,11 +88,14 @@
   
 }
 /* Main css */
-.header-menu span{
+.header-menu i{
+    display: none;
+}
+#test1{
     display: none;
 }
 @media (max-width:992px) {
-    .header-logo span {
+    .header-logo i {
         position: relative;
         top: -20px;
     }
@@ -101,24 +104,55 @@
         text-align: center;
         margin-bottom: 15px;
     }
+   
+    /* .header-button a {
+        opacity: 0;
+        visibility: hidden;
+    } */
+    
+    .primary-menu ul li {
+        display: block;
+    }
     .header-logo a img {
         float: inherit;
+        vertical-align: middle;
     }
-    .header-menu ul {
+    #test1{
         display: none;
     }
+    .header-menu ul {
+        position: fixed;
+        top: 109px;
+        left: 0;
+        background: red;
+        height: 100%;
+        width: 24%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .7s;
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    .primary-menu #test1:checked ~ ul{
+       opacity: 1;
+       visibility: visible;
+       transform: scaleX(1);
+    }
+   
     .header-button {
         position: absolute;
         right: 20px;
         top: 50px;
         width: 200px;
     }
-    .header-menu span {
+   
+    .header-menu i {
         font-size: 30px;
         color: #6278df;
         cursor: pointer;
         display: block;
     }
+
     .primary-btn {
         font-size: 19px;
         padding: 16px 23px;
